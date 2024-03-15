@@ -5,23 +5,23 @@ function App() {
     <div>
 
       <div>
-        <Button>Click me!!</Button>
+        <Button success>Click me!!</Button>
       </div>
 
       <div>
-        <Button>Buy Now!</Button>
+        <Button success>Buy Now!</Button>
       </div>
 
       <div>
-        <Button>See Deal!</Button>
+        <Button success>See Deal!</Button>
       </div>
 
       <div>
-        <Button>Hide Ads!</Button>
+        <Button success>Hide Ads!</Button>
       </div>
 
       <div>
-        <Button>Something!</Button>
+        <Button success>Something!</Button>
       </div>
 
     </div>
