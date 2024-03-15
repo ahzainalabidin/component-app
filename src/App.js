@@ -5,23 +5,23 @@ function App() {
     <div>
 
       <div>
-        <Button success>Click me!!</Button>
+        <Button success rounded outline>Click me!!</Button>
       </div>
 
       <div>
-        <Button success>Buy Now!</Button>
+        <Button danger outline>Buy Now!</Button>
       </div>
 
       <div>
-        <Button success>See Deal!</Button>
+        <Button warning>See Deal!</Button>
       </div>
 
       <div>
-        <Button success>Hide Ads!</Button>
+        <Button secondary outline>Hide Ads!</Button>
       </div>
 
       <div>
-        <Button success>Something!</Button>
+        <Button primary rounded>Something!</Button>
       </div>
 
     </div>
