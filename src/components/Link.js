@@ -1,9 +1,12 @@
+import classNames from "classnames";
 import { useContext } from "react";
 import NavigationContext from "../context/navigation";
 
 function Link({ to, children }) {
 
     const { navigate } = useContext(NavigationContext);
+
+    const hyperlinkClass = classNames('text-blue-500');
 
     const handleClick = (event) => {
 
@@ -16,7 +19,7 @@ function Link({ to, children }) {
 
     };
 
-    return <a href={to} onClick={handleClick}>{children}</a>
+    return <a className={hyperlinkClass} href={to} onClick={handleClick}>{children}</a>
 
 }
 
