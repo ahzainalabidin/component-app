@@ -1,11 +1,15 @@
 import classNames from "classnames";
 import useNavigation from "../hooks/use-navigation";
 
-function Link({ to, children }) {
+function Link({ to, children, className, activeClassName }) {
 
-    const { navigate } = useNavigation();
+    const { navigate, currentPath } = useNavigation();
 
-    const hyperlinkClass = classNames('text-blue-500');
+    const hyperlinkClass = classNames(
+        'text-blue-500',
+        className,
+        currentPath === to && activeClassName
+    );
 
     const handleClick = (event) => {
 
