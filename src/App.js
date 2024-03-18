@@ -6,9 +6,7 @@ import DropdownPage from "./pages/DropdownPage";
 function App() {
 
   return (
-    <div>
-      <DropdownPage />
-    </div>
+    <div></div>
   );
 
 }
