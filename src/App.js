@@ -1,8 +1,15 @@
+import { useState } from "react";
 import Dropdown from "./components/Dropdown";
 import AccordionPage from "./pages/AccordionPage";
 import ButtonPage from "./pages/ButtonPage";
 
 function App() {
+
+  const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  };
 
   const options = [
     { label: 'Red', value: 'red' },
@@ -12,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <Dropdown options={options} />
+      <Dropdown options={options} selection={selection} onSelect={handleSelect} />
     </div>
   );
 
