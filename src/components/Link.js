@@ -6,11 +6,17 @@ function Link({ to, children }) {
     const { navigate } = useContext(NavigationContext);
 
     const handleClick = (event) => {
+
+        if (event.ctrlKey || event.metaKey) {
+            return;
+        }
+
         event.preventDefault();
         navigate(to);
+
     };
 
-    return <a onClick={handleClick}>{children}</a>
+    return <a href={to} onClick={handleClick}>{children}</a>
 
 }
 
