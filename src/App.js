@@ -4,9 +4,15 @@ import ButtonPage from "./pages/ButtonPage";
 
 function App() {
 
+  const options = [
+    { label: 'Red', value: 'red' },
+    { label: 'Green', value: 'green' },
+    { label: 'Blue', value: 'blue' },
+  ]
+
   return (
     <div>
-      <Dropdown />
+      <Dropdown options={options} />
     </div>
   );
 
