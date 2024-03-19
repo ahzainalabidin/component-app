@@ -1,4 +1,14 @@
-function Table({ data }) {
+function Table({ data, config }) {
+
+    const renderedHeaders = config.map((column) => {
+
+        return (
+            <th key={column.label}>
+                {column.label}
+            </th>
+        );
+
+    });
 
     const renderedRows = data.map((fruit) => {
 
@@ -23,9 +33,7 @@ function Table({ data }) {
 
             <thead>
                 <tr className="border-b-2">
-                    <th>Fruit</th>
-                    <th>Color</th>
-                    <th>Score</th>
+                    {renderedHeaders}
                 </tr>
             </thead>
 
