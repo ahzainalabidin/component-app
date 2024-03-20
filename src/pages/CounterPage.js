@@ -5,6 +5,7 @@ import Panel from "../components/Panel";
 const INCREMENT_COUNT = 'increment';
 const DECREMENT_COUNT = 'decrement';
 const SET_VALUE_TO_ADD = 'change-value-to-add';
+const ADD_VALUE_TO_COUNT = 'add-value-to-count';
 
 const reducer = (state, action) => {
 
@@ -28,6 +29,13 @@ const reducer = (state, action) => {
                 valueToAdd: action.payload,
             };
 
+        case ADD_VALUE_TO_COUNT:
+            return {
+                ...state,
+                count: state.count + state.valueToAdd,
+                valueToAdd: 0
+            };
+
         default:
             return state;
 
@@ -36,9 +44,6 @@ const reducer = (state, action) => {
 };
 
 function CounterPage({ initialCount }) {
-
-    // const [count, setCount] = useState(initialCount);
-    // const [valueToAdd, setValueToAdd] = useState(0);
 
     const [state, dispatch] = useReducer(reducer, {
         count: initialCount,
@@ -69,9 +74,13 @@ function CounterPage({ initialCount }) {
     };
 
     const handleSubmit = (event) => {
+
         event.preventDefault();
-        // setCount(count + valueToAdd);
-        // setValueToAdd(0);
+
+        dispatch({
+            type: ADD_VALUE_TO_COUNT,
+        });
+
     };
 
     return (
